@@ -3,10 +3,15 @@ include ../../mixins/box-head.pug
 block main 
     +box-head('DANH SACH SAN PHAM')
 
-    .card(style='width: 18rem;')
-        img.card-img-top(src='https://gizmobo.com/wp-content/uploads/2022/08/Apple-iPhone-14-Pro-gold.jpg' alt='...')
-        .card-body
-            h5.card-title Card title
-            p.card-text
-            | Some quick example text to build on the card title and make up the bulk of the card&apos;s content.
-            a.btn.btn-primary(href='#') Go somewhere
+    .row.mx-auto
+        each item in products
+            .card(style='width: 14rem;' class="col-4")
+                    img.card-img-top.img(src=item.thumbnail alt=item.title )
+                    .card-body
+                        h5.card-title #{item.title}
+                        p.card-text #{item.description}
+                        .d-flex.justify-content-between 
+                            span.price-new.text-primary $#{item.priceNew}
+                            span.price-old $#{item.discountPercentage}
+                            span.price-discountPercentage -#{item.discountPercentage}
+                        a.btn.btn-primary(href='#') Go somewhere

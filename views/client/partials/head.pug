@@ -1,1 +1,26 @@
-header Header
+div.row
+    .col-8
+        nav.navbar.navbar-expand-lg.navbar-light.bg-light
+            div.img.rounded-circle
+                img.img(src='https://static.vecteezy.com/system/resources/previews/020/452/886/original/backend-icon-vector.jpg')
+            a.navbar-brand(href='#') BACKEND
+            button.navbar-toggler(type='button' data-toggle='collapse' data-target='#navbarNav' aria-controls='navbarNav' aria-expanded='false' aria-label='Toggle navigation')
+                span.navbar-toggler-icon
+            #navbarNav.collapse.navbar-collapse
+                ul.navbar-nav
+                    li.nav-item.active
+                        a.nav-link(href='#') Home 
+                    li.nav-item
+                        a.nav-link(href='#') Features
+                    li.nav-item
+                        a.nav-link(href='#') Pricing 
+                    li.nav-item
+                        a.nav-link.disabled(href='#') Disabled
+
+    .col-4
+        .input-group.rounded
+            input.form-control.rounded(type='search' placeholder='Search' aria-label='Search' aria-describedby='search-addon')
+            span#search-addon.input-group-text.border-0
+                div.btn.btn-info Search
+
+

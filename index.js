@@ -5,10 +5,9 @@ const dotenv = require("dotenv");
 dotenv.config();
 
 const route = require("./routes/client/index.route");
-
 const app = express();
 const port = process.env.PORT; // Ensure this matches the case in your .env file
-
+app.use(express.static("public"));
 // Route
 route(app);
 
